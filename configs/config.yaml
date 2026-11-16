@@ -1,0 +1,11 @@
+defaults:
+  - dataset: celeba
+  - target: celeba_smiling
+  - model: densenet121
+  - _self_
+
+paths:
+  data_root: ${oc.env:ROBUST_GCF_DATA,${hydra:runtime.cwd}/data}
+  outputs_root: ${hydra:runtime.cwd}/outputs
+
+seed: 0

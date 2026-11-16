@@ -1,0 +1,8 @@
+name: chestmnist
+raw_root: ${paths.data_root}/raw/medmnist
+channels: 1
+cache_resolution: 128
+crop: none              # MedMNIST+ images are already square
+source_kwargs:
+  size: 128             # read chestmnist_128.npz directly (no second resize)
+augment: false
