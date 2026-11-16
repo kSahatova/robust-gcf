@@ -1,0 +1,7 @@
+name: chestmnist_effusion
+dataset: chestmnist
+column: effusion
+positive_name: Effusion
+negative_name: Healthy
+negative_policy: no_finding   # negatives = no finding at all; other-finding-only images excluded
+imbalance: pos_weight         # ~18% Effusion

@@ -1,0 +1,7 @@
+name: celeba
+raw_root: ${paths.data_root}/raw/celeba
+channels: 3
+cache_resolution: 128   # GCD (256 px DiffAE) gets a second cache built with cache_resolution=256
+crop: center            # [check] must match DiME's CelebA preprocessing (setup ToDo 1)
+source_kwargs: {}
+augment: true           # horizontal flip

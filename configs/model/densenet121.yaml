@@ -1,0 +1,8 @@
+arch: densenet121
+pretrained: true
+input_size: 128
+interpolation: bilinear
+antialias: true
+# mean/std default per channel count: ImageNet for RGB, 0.5/0.5 for grayscale (PreprocessSpec.default_for)
+mean: null
+std: null
