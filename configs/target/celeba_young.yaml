@@ -1,7 +1,0 @@
-name: celeba_young
-dataset: celeba
-column: Young
-positive_name: Young
-negative_name: Old
-negative_policy: absent
-imbalance: threshold    # ~25% Not Young; positives are the majority class. Fixed per task, recorded.

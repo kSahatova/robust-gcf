@@ -1,7 +1,8 @@
 defaults:
-  - dataset: celeba
-  - target: celeba_smiling
+  - task: celeba_smiling    # pulls in its dataset; sweep with task=celeba_smiling,celeba_young,chestmnist_effusion
   - model: densenet121
+  - train: default
+  - variant: m0             # m0 | seed | subsample (E2 retraining)
   - _self_
 
 paths:
@@ -9,3 +10,11 @@ paths:
   outputs_root: ${hydra:runtime.cwd}/outputs
 
 seed: 0
+epochs: null                # shortcut for train.max_epochs, e.g. epochs=10; null -> train/default.yaml
+
+hydra:
+  run:
+    dir: outputs/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: outputs/hydra/multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}
