@@ -1,0 +1,4 @@
+# E2: retrain on a class-stratified subsample of the train split, e.g. variant=subsample seed=1
+name: subsample${variant.train_subsample}_seed${seed}
+train_subsample: 0.8
+subsample_seed: ${seed}

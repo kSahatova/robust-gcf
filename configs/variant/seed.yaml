@@ -1,0 +1,4 @@
+# E2: retrain on the full train split with another seed, e.g. variant=seed seed=1
+name: seed_${seed}
+train_subsample: null
+subsample_seed: 0

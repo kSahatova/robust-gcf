@@ -1,8 +1,0 @@
-# Fields map 1:1 onto robust_gcf.core.schemas.TargetSpec
-name: celeba_smiling
-dataset: celeba
-column: Smiling
-positive_name: Smiling
-negative_name: Not smiling
-negative_policy: absent
-imbalance: none

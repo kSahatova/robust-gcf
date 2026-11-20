@@ -1,0 +1,24 @@
+# Classifier training (scripts/train_classifier.py). Setup: ImageNet init, mixed precision,
+# early stopping on validation AUROC. One max_epochs for all tasks (setup: ~5 CelebA / ~10 ChestMNIST);
+# per run: `epochs=10` (shortcut in config.yaml) or train.max_epochs=10.
+max_epochs: 5
+batch_size: 64
+eval_batch_size: 128
+num_workers: 4
+lr: 1.0e-4
+weight_decay: 1.0e-4
+scheduler: cosine            # cosine | none
+monitor: val/auroc           # checkpoint + early stopping metric (mode: max)
+early_stopping_patience: 2
+balance: none                # none | sampler (weighted sampler; see log/2026-11-20_labeling_and_sampling.md)
+threshold_method: auto       # auto: youden if target.imbalance == threshold, else fixed 0.5 | fixed | youden | f1
+precision: auto              # auto: 16-mixed on CUDA, 32-true on CPU
+accelerator: auto
+devices: 1
+deterministic: false
+gradient_clip_val: null
+overwrite: false             # refuse to replace an existing outputs/classifiers/.../model.pt
+# smoke runs / debugging (null = use everything)
+limit_train_batches: null
+limit_val_batches: null
+limit_test_batches: null

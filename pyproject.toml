@@ -17,6 +17,7 @@ torch = ["torch>=1.11", "torchvision>=0.12"]
 # Training/orchestration env only. Never required by CF-method envs.
 train = ["lightning>=2.0", "torchmetrics>=1.0", "hydra-core>=1.3"]
 medmnist = ["medmnist>=3.0"]
+viz = ["matplotlib>=3.5", "pyyaml"]
 test = ["pytest"]
 
 [tool.setuptools.packages.find]

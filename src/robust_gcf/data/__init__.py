@@ -1,1 +1,1 @@
-"""Data access. Import submodules explicitly; `datamodule` is the only one that needs Lightning."""
+"""Data access. Import submodules explicitly; `lit_datamodule` is the only one that needs Lightning."""

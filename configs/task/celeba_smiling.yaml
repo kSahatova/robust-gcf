@@ -1,0 +1,15 @@
+# @package _global_
+# One experiment task = dataset settings (shared, from configs/dataset/) + binary target.
+# `target` maps 1:1 onto robust_gcf.core.schemas.TargetSpec.
+defaults:
+  - /dataset: celeba
+  - _self_
+
+target:
+  name: celeba_smiling
+  dataset: celeba
+  column: Smiling
+  positive_name: Smiling
+  negative_name: Not smiling
+  negative_policy: absent
+  imbalance: none

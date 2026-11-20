@@ -1,0 +1,4 @@
+# Reference classifier M0.
+name: m0
+train_subsample: null
+subsample_seed: 0
