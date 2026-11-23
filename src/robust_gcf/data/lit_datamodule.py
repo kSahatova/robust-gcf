@@ -16,8 +16,7 @@ except ImportError:  # pragma: no cover
     import pytorch_lightning as pl
 
 from robust_gcf.core.schemas import TargetSpec
-from robust_gcf.data.cache import ImageCache
-from robust_gcf.data.datasets import make_split_dataset
+from robust_gcf.data.datasets import make_split_dataset, ImageCache
 from robust_gcf.data.preprocessing import train_transform
 
 

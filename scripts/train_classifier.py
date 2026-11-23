@@ -12,12 +12,12 @@ Examples (from the repository root, with .venv active):
     python scripts/train_classifier.py train.max_epochs=1 train.limit_train_batches=20 \
         train.limit_val_batches=10 train.limit_test_batches=10 train.overwrite=true
 
-Output: outputs/classifiers/{dataset}/{target}/{variant}/ (see robust_gcf/training/train.py).
+Output: outputs/classifiers/{dataset}/{target}/{variant}/ (see robust_gcf/training/train_classifier.py).
 """
 import hydra
 from omegaconf import DictConfig
 
-from robust_gcf.training.train import train
+from robust_gcf.training.train_classifier import train
 
 
 @hydra.main(config_path="../configs", config_name="config", version_base="1.3")

@@ -2,7 +2,7 @@
 *__pycache__/
 .venv-*/
 *egg-info
-data/
-log/
-outputs/
-tests/
+/data/
+/log/
+/outputs/
+/tests/
